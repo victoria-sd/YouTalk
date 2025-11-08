@@ -1,0 +1,760 @@
+
+/* Основной контейнер для страницы статьи */
+.article-page {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.article-page__breadcrumbs {
+    margin-bottom: 30px;
+}
+
+.article-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px; /* Основной контент + боковой блок */
+    gap: 40px; /* Отступ между основным контентом и боковой колонкой */
+    max-width: 1200px;
+}
+
+.article-content {
+    max-width: 690px;
+}
+
+.article-content__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.article-content__meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.article-content__image-wrapper {
+    margin-left: 0;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.article-content__image {
+    width: 100%;
+    height: 331px; /* Высота авто, чтобы сохранить пропорции */
+    display: block;
+    object-fit: cover;
+    margin-left: 0;
+}
+
+.article-content__image__text {
+    opacity: 0.7;
+}
+
+.article-content__image_with_text {
+    display: flex;
+    flex-direction: column; /* Располагаем изображение и текст друг под другом */
+}
+
+.article-content__image-with-overlay {
+    padding: 20px;
+    text-align: center;
+    background-image: url('images/Vector.png'); /* Устанавливаем изображение как фон */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article-content__text-overlay {
+    position: absolute; /* Позиционируем поверх изображения */
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Точное центрирование */
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 10; /* Чтобы текст был поверх изображения */
+    font-style: italic;
+}
+
+.article-section {
+    margin-bottom: 40px;
+}
+
+.article-section__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.article-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article-section__item {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.article-section__item::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #7FC5C4;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.article-section__link {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.article-section__link:hover,
+.article-section__link:focus {
+    color: var(--primary-color);
+}
+
+.article-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color:  var(--text-color);;
+    margin-bottom: 20px;
+}
+
+.article-content__image-with-text-in-row {
+    display: flex;
+    flex-direction: row;
+}
+.article-content__image-in-row-lady {
+    width: 282px;
+    height: 380px;
+    padding-right: 20px;
+}
+
+.article-content__image-in-row-hands {
+    width: 281px;
+    height: 174px;
+    padding-right: 20px;
+}
+
+.article-content__blockquote {
+    background-color: #F0F7FF;
+    padding: 25px 30px;
+    margin: 30px 0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 16px 16px 0;
+    position: relative;
+}
+
+.article-content__blockquote p {
+    font-style: italic;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.article-content__cite {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    text-align: right;
+}
+
+.article-content__two-images-with-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap
+}
+
+.article-content__image-text-pair {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.article-content__caption-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    width: 100%;
+}
+
+.article-content__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.article-content__two-images .article-content__image-wrapper {
+    margin-bottom: 0;
+}
+
+.article-content__exercise {
+    background-color: #FEFAEC;
+    padding: 5px 20px;
+    margin: 30px 0;
+    border-radius: 16px;
+    position: relative;
+}
+
+.blue-exercise {
+    background-color: #03B2A51A;
+}
+
+.article-content__exercise-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.article-tags {
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.article-tags__item {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #2963A3;
+    cursor: pointer;
+}
+
+.article-tags__item:hover,
+.article-tags__item:focus {
+    color: #509ef8;
+}
+
+/* Блок "Откликается проблема?" */
+.problem-section {
+    border-top: 1px solid #E0E0E0;
+    padding: 60px 0;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-section__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.problem-section__text-content {
+    flex: 1;
+    max-width: 450px;
+    text-align: left;
+}
+
+.problem-section__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 56px;
+    color: var(--text-color);
+}
+
+.problem-section__description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.problem-section__button {
+    background-color: #16C8BB;
+    color: #FFFFFFFF;
+    font-weight: 700;
+    padding: 12px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.problem-section__button:hover,
+.problem-section__button:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Иллюстрация */
+.problem-section__illustration {
+    position: relative;
+    flex-shrink: 0; /* Не сжимать иллюстрацию */
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.problem-section__image-illustration {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+}
+
+/* Боковой блок */
+.article-sidebar__block {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+/* Блок "Загружаем свободные окошки" */
+.article-sidebar__block_free-sessions {
+    background-color: #E6F0FD;
+}
+.article-sidebar__image-wrapper_free-sessions {
+    margin-top: 30px;
+    margin-left: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+.article-sidebar__content {
+    padding: 20px;
+    text-align: center;
+}
+
+.article-sidebar__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.article-sidebar__text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.article-sidebar__button {
+    background-color: #16C8BB;
+    color: #FFFFFFFF;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.article-sidebar__button:hover,
+.article-sidebar__button:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Блок с психологом */
+.article-sidebar__block_psychologist {
+    padding: 20px;
+    text-align: center;
+}
+
+.article-sidebar__psy-header {
+    position: relative; /* Для позиционирования меток */
+    display: flex;
+    justify-content: center; /* Центрируем фото */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.article-sidebar__psy-labels {
+    position: absolute;
+    top: 0; /* Позиционируем метки сверху */
+    left: 0; /* Позиционируем метки слева */
+    display: flex;
+    flex-direction: column; /* Метки друг под другом */
+    gap: 5px;
+    z-index: 2; /* Чтобы метки были поверх фото */
+}
+
+.article-sidebar__psy-label {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color);
+    backdrop-filter: blur(3px); /* Размытие */
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+.article-sidebar__psy-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Делаем фото круглым */
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.article-sidebar__psy-body {
+    margin-top: 20px;
+}
+
+.article-sidebar__psy-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.article-sidebar__psy-specialty {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.article-sidebar__psy-experience {
+    font-size: 13px;
+    color: #A2A7B1;
+    margin-bottom: 20px;
+    border-bottom: #DEDEDE 1px solid;
+}
+
+.article-sidebar__works-with-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.article-sidebar__works-with-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.article-sidebar__works-with-item {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 14px;
+    color: #555;
+}
+
+.article-sidebar__works-with-item::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    color: #03B2A5;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.article-sidebar__details-button {
+    width: 100%;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+/* Блок "Дарите заботу" */
+.article-sidebar__block_gift {
+    box-shadow: none;
+    border: none;
+}
+
+.article-sidebar__gift-image {
+    width: 300px;
+}
+
+
+/* Блок "8 Видео сессий" */
+.article-sidebar__block_sessions {
+    padding: 20px;
+    text-align: left;
+    background-image: url('images/gifts.png'); /* Устанавливаем изображение как фон */
+    background-size: cover; /* Фон будет покрывать всю область */
+    background-position: center; /* Фон будет центрирован */
+    position: relative; /* Для позиционирования текста поверх */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.article-sidebar__sessions-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.article-sidebar__sessions-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.article-sidebar__price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.article-sidebar__buy-button {
+    background-color: #35B3A9;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 10px 20px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-right: auto;
+
+}
+
+.article-sidebar__buy-button:hover,
+.article-sidebar__buy-button:focus {
+    background-color: var(--primary-color);
+}
+
+/*Красный круг на фоне*/
+.article-sidebar__big_red_circle {
+    position: relative;
+    margin-top: 800px;
+    margin-left: 250px;
+}
+
+
+/* Адаптивность */
+/* Планшет */
+@media (max-width: 992px) {
+    .article-layout {
+        grid-template-columns: 1fr; /* Основной контент занимает всю ширину */
+        gap: 30px;
+    }
+
+    .article-sidebar {
+        order: -1; /* Боковой блок перемещается наверх */
+        max-width: 500px; /* Ограничиваем ширину на планшете */
+        margin: 0 auto; /* Центрируем */
+    }
+
+    .article-content__title {
+        font-size: 30px;
+    }
+
+    .article-section__title {
+        font-size: 22px;
+    }
+
+    .article-content__blockquote p {
+        font-size: 16px;
+    }
+
+    .article-content__two-images {
+        grid-template-columns: 1fr; /* Картинки в одну колонку */
+    }
+
+    .problem-section {
+        padding: 40px 0;
+    }
+
+    .problem-section__container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .problem-section__text-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .problem-section__illustration {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 30px;
+    }
+
+    .problem-section__image-illustration {
+        margin-left: auto;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+    .article-page {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .article-page__breadcrumbs {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .article-layout {
+        gap: 20px;
+    }
+
+    .article-content {
+        padding: 20px;
+    }
+
+    .article-content__title {
+        font-size: 26px;
+    }
+
+    .article-content__meta {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .article-content__image-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .article-section__title {
+        font-size: 20px;
+    }
+
+    .article-section__item::before {
+        top: 6px;
+    }
+
+    .article-content__blockquote {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .article-content__blockquote p {
+        font-size: 16px;
+    }
+
+    .article-content__two-images {
+        gap: 15px;
+    }
+
+    .article-tags {
+        margin-top: 30px;
+        padding-top: 15px;
+        justify-content: center;
+    }
+
+    .article-sidebar {
+        max-width: 100%;
+    }
+
+    .article-sidebar__block_psychologist {
+        padding: 15px;
+    }
+
+    .article-sidebar__psy-header {
+        margin-bottom: 15px;
+    }
+
+    .article-sidebar__psy-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .article-sidebar__psy-labels {
+        left: 5px;
+    }
+
+    .article-sidebar__psy-label {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+
+    .article-sidebar__psy-name {
+        font-size: 18px;
+    }
+
+    .article-sidebar__works-with-title {
+        font-size: 15px;
+    }
+
+    .article-sidebar__works-with-item {
+        font-size: 13px;
+    }
+
+    .article-sidebar__block_sessions {
+        min-height: 300px;
+        padding: 15px;
+    }
+
+    .article-sidebar__sessions-title {
+        font-size: 18px;
+    }
+
+    .article-sidebar__sessions-text {
+        font-size: 13px;
+    }
+
+    .article-sidebar__price {
+        font-size: 22px;
+    }
+
+    .problem-section {
+        padding: 30px 0;
+    }
+
+    .problem-section__title {
+        font-size: 28px;
+    }
+
+    .problem-section__description {
+        font-size: 15px;
+    }
+
+    .problem-section__illustration {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+
+
+
